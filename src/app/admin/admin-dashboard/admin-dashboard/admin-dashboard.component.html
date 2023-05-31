@@ -1,0 +1,44 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar>Menu</mat-toolbar>
+    <ng-container>
+      <div class="admin">
+        <img src="assets/images/adminlogo.jpeg" class="rounded-circle user-img" alt="IMG" loading="lazy"/>
+         &nbsp; Admin
+         <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </div>
+    </ng-container>
+    <div class="submenu">
+      <h4>--- MAIN MENU</h4>
+    </div>
+    <mat-nav-list>
+      <a mat-list-item class="links" routerLink="home" [routerLinkActive]="'active'"><i class="fa fa-home" aria-hidden="true"></i>&nbsp;Home</a>
+      <a mat-list-item class="links" routerLink="View-bookings" routerLinkActive="active"><i class="fa fa-file-text" aria-hidden="true"></i>&nbsp;Bookings</a>
+      <a mat-list-item class="links" routerLink="Confirmed" routerLinkActive="active"><i class="fa fa-calendar-check-o" aria-hidden="true"></i>&nbsp;Confirmed</a>
+      <a mat-list-item class="links" routerLink="View-Users" routerLinkActive="active"><i class="fa fa-users" aria-hidden="true"></i>&nbsp;Users</a>
+      <a mat-list-item class="links" routerLink="View-Branches" routerLinkActive="active"><i class="fa fa-building" aria-hidden="true"></i>&nbsp;Branches</a>
+      <a mat-list-item class="links" routerLink="View-Slots" routerLinkActive="active"><i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp;Slots</a>
+      <!-- <a mat-list-item routerLink="admin-home" routerLinkActive="active"><i class="fa fa-cogs" aria-hidden="true"></i>&nbsp;Management</a> -->
+
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>UrbanTastingFoodCompany</span>
+    </mat-toolbar>
+    <ng-container>
+      <router-outlet></router-outlet>
+    </ng-container>
+  </mat-sidenav-content>
+</mat-sidenav-container>

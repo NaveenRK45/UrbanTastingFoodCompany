@@ -1,0 +1,80 @@
+.head{
+    background-color: #ebebeb;
+    height: 60px;
+    line-height: 60px;
+}
+.spacer{
+    flex: 1 1 auto;
+}
+.dashboard{
+    font-size: 1rem;
+    margin-left: 2.5rem;
+    font-weight: 500;
+    color: grey;
+}
+.path{
+    float: right;
+    margin-right: 1.5rem;
+    font-size: 14px;
+}
+.body{
+    background-color: #f7f7ff;
+    height: 100%;
+}
+.ft{
+    background-color: #ebebeb;
+    padding: 0.5rem;
+    position: fixed;
+    bottom: 0;
+}
+.bg-comman {
+    background-color: #3f51b5;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0px 0px 31px 3px rgba(44, 50, 63, 0.02);
+}
+.card-body {
+    position: relative;
+    padding: 25px;
+    transform: translateY(-10px);
+}
+.card-body {
+    padding: 1.25rem;
+}
+// .bg-comman .db-icon {
+//     background-color: #EDF4FF;
+//     border-radius: 8px;
+// }
+.db-icon {
+    font-size: 25px;
+    width: 60px;
+    height: 80px;
+    border-radius: 10px;
+    color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+}
+.db-info h6 {
+    margin: 0px;
+    font-weight: 400;
+    font-size: 14px;
+    color:#fff;
+    margin-bottom: 5px;
+}
+.db-info h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 0;
+}
+img{
+    height: 70%;
+}
+
