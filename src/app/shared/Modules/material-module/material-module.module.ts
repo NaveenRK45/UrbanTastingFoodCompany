@@ -7,6 +7,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { MatSortModule } from '@angular/material/sort';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 const materialComponents: any[] | Type<any> | ModuleWithProviders<{}>=[
@@ -16,7 +17,8 @@ const materialComponents: any[] | Type<any> | ModuleWithProviders<{}>=[
   MatPaginatorModule,
   MatFormFieldModule,
   MatInputModule,
-  MatSortModule
+  MatSortModule,
+  MatDialogModule
   
 ]
 
