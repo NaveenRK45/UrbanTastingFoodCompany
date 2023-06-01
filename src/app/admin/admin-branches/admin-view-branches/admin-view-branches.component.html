@@ -1,1 +1,106 @@
-<p>admin-view-branches works!</p>
+
+<div class="head">
+    <span class="dashboard">Branches</span>
+    <span class="path">Home &nbsp;/&nbsp;<span style="color: #3f51b5;">Branches</span></span>
+</div>
+<div class="body">
+    <div class="card">
+    <div class="row add">
+        <div class="col-sm-2 mb-1">
+            <button class="button btn btn-sm" (click)="add()"> <i class="fa fa-plus-circle" aria-hidden="true"></i>&nbsp;Add</button>
+        </div>
+        <div class="col-sm-7"></div>
+        <div class="col-sm-3">
+                <input (keyup)="applyFilter($event)" class="input-field form-control" type="text" placeholder="Enter Search Data" #input>
+        </div>
+    </div> 
+    <div class="table-responsive">
+    <div class="mat-elevation-z8">
+        <table mat-table [dataSource]="dataSource" matSort class="table">
+    
+        <ng-container matColumnDef="Id">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header class="sno"> S.No </th>
+            <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+        </ng-container>
+    
+        <ng-container matColumnDef="user">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header class="location"> Location </th>
+            <td mat-cell *matCellDef="let row"> {{row.userId}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="employeeId">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header class="lang"> Langitude </th>
+            <td mat-cell *matCellDef="let row"> {{row.userId}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="branch">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header class="lati"> Latitude </th>
+            <td mat-cell *matCellDef="let row"> {{row.userId}} </td>
+        </ng-container>
+        
+        <ng-container matColumnDef="bookingDate">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header class="launch"> Launch </th>
+            <td mat-cell *matCellDef="let row"> {{row.userId}} </td>
+        </ng-container>
+        
+        <ng-container matColumnDef="launchStatus">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header class="launchSlot"> Launch Slots </th>
+            <td mat-cell *matCellDef="let row"> {{row.userId}} </td>
+        </ng-container>
+    
+        <ng-container matColumnDef="DinnerStatus">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header class="Dinner"> Dinner </th>
+            <td mat-cell *matCellDef="let row"> {{row.userId}} </td>
+        </ng-container>
+        
+        <ng-container matColumnDef="slot">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header class="DinnerSlot"> Dinner Slot </th>
+            <td mat-cell *matCellDef="let row"> {{row.userId}} </td>
+        </ng-container>
+        
+        <ng-container matColumnDef="createdDate">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header class="radius"> Radius in (Kms) </th>
+            <td mat-cell *matCellDef="let row"> {{row.userId}} </td>
+        </ng-container>
+        
+        <ng-container matColumnDef="modifiedDate">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header class="status"> Status </th>
+            <td mat-cell *matCellDef="let row"> {{row.userId}} </td>
+        </ng-container>
+        
+        <!-- <ng-container matColumnDef="action">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Action </th>
+            <td mat-cell *matCellDef="let row">
+                <button class="btn btn-primary">E</button>
+                <button class="btn btn-primary">D</button>
+                
+            </td>
+        </ng-container> -->
+        <ng-container matColumnDef="action">
+            <th mat-header-cell *matHeaderCellDef class="action">Action</th>
+            <td mat-cell *matCellDef="let element">
+              <button mat-icon-button color="primary"><mat-icon>edit</mat-icon></button>
+              <button mat-icon-button color="warn" ><mat-icon>delete</mat-icon></button>
+            </td>
+          </ng-container>
+    
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    
+
+        <tr class="mat-row" *matNoDataRow>
+            <td class="mat-cell" colspan="4">No data matching the filter{{input.value}}</td>
+        </tr>
+        </table>
+    
+        <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+    </div>
+    </div>
+    </div>
+
+</div>
+<div class="row g-0">
+    <div class="ft text-center">
+            <span>Copyright &#169; 2023 <a href="http://vitasoft.in" target="_blank" style="text-decoration: none;">VITA Technologies</a>. All Rights are Reserved</span>
+    </div>
+</div>

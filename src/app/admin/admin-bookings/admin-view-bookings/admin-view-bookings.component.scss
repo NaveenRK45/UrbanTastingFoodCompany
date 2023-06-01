@@ -16,7 +16,6 @@
 }
 .body{
     background-color: #f7f7ff;
-    height: 100%;
 }
 .ft{
     background-color: #ebebeb;
@@ -25,21 +24,36 @@
     // bottom: 0;
 }
 .card{
-margin: 20px;
+    margin: 20px;
 }
-table {
-    width: 100%;
-  }
-  .mat-form-field{
-    font-size: 14px;
-    width: 20%;
-  }
-  .mat-mdc-form-field {
-    font-size: 14px;
-    width: 100%;
-  }
-  
-  td, th {
-    width: 25%;
-  }
-  
+// .mat-sort-header{
+//   background-color: #a65c1f;
+// }
+
+ .button{
+  background-color: #1fa67a;
+  border-color: #1fa67a;
+  border: 2px solid #1fa67a;
+  color: white;
+  font-size: 16px;
+}
+.button:hover{
+  background-color: green;
+  color: white;
+}
+
+.fa-plus-circle{
+  color: #f7f7ff;
+}
+
+.input-field {
+  padding: 6px 10px;
+  color: rgb(1, 1, 26);
+  border-radius: 0px;
+  background-color: #f3f8f6;
+}
+.add{
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 20px;
+}

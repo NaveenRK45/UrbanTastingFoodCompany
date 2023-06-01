@@ -6,6 +6,8 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { AdminService } from 'src/app/shared/services/admin.service';
 import { Router } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
+import { AdminAddBookingsComponent } from '../admin-add-bookings/admin-add-bookings.component';
 
 
 
@@ -17,14 +19,14 @@ import { Router } from '@angular/router';
 })
 export class AdminViewBookingsComponent {
 
-  displayedColumns:string[] =['id','userId','title','body']
+  displayedColumns:string[] =['Id','user','employeeId','branch','bookingDate','launchStatus','DinnerStatus','slot','createdDate','modifiedDate','action']
   dataSource!:MatTableDataSource<any>
   @ViewChild(MatPaginator) paginator!:MatPaginator
   @ViewChild(MatSort) sort!:MatSort
   Bookings:any;
 
 
-  constructor(private AdminApi:AdminService) {
+  constructor(private AdminApi:AdminService,public dialog:MatDialog) {
 
     this.AdminApi.showBookings().subscribe((res:any)=>{
       this.Bookings = res;
@@ -41,5 +43,11 @@ export class AdminViewBookingsComponent {
     if (this.dataSource.paginator) {
       this.dataSource.paginator.firstPage();
     }
+  }
+  add(){
+    this.dialog.open(AdminAddBookingsComponent,{
+      width:"70%",
+      height:"50%"
+    })
   }
 }
