@@ -26,6 +26,8 @@ import { AdminDeleteSlotsComponent } from './admin/admin-slots/admin-delete-slot
 import { AdminViewSlotsComponent } from './admin/admin-slots/admin-view-slots/admin-view-slots.component';
 import { MaterialModuleModule } from './shared/Modules/material-module/material-module.module';
 import { AdminHomeComponent } from './admin/admin-home/admin-home.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -53,6 +55,9 @@ import { AdminHomeComponent } from './admin/admin-home/admin-home.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
 
     LayoutModule,
     MatToolbarModule,

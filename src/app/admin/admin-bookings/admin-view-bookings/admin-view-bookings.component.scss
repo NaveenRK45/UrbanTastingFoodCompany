@@ -1,0 +1,45 @@
+.head{
+    background-color: #ebebeb;
+    height: 60px;
+    line-height: 60px;
+}
+.dashboard{
+    font-size: 1rem;
+    margin-left: 2.5rem;
+    font-weight: 500;
+    color: grey;
+}
+.path{
+    float: right;
+    margin-right: 1.5rem;
+    font-size: 14px;
+}
+.body{
+    background-color: #f7f7ff;
+    height: 100%;
+}
+.ft{
+    background-color: #ebebeb;
+    padding: 0.5rem;
+    // position: fixed;
+    // bottom: 0;
+}
+.card{
+margin: 20px;
+}
+table {
+    width: 100%;
+  }
+  .mat-form-field{
+    font-size: 14px;
+    width: 20%;
+  }
+  .mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  td, th {
+    width: 25%;
+  }
+  
