@@ -1,1 +1,70 @@
-<p>admin-edit-slots works!</p>
+<div class="container">
+    <form [formGroup]="UpdateSlotForm" (ngSubmit)="UpdateSlot()">
+    <div class="row mb-4 header">
+        <h3 class="head">URBAN TASTING FOOD COMPANY</h3>
+    </div>
+    <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10">
+            <mat-form-field appearance="outline">
+                <mat-label>Slot Name</mat-label>
+                <input matInput placeholder="Enter SlotName" formControlName="slot_name">
+              </mat-form-field>
+        </div>
+        <div class="col-sm-1"></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10">
+            <mat-form-field appearance="outline">
+                <mat-label>Preffer One</mat-label>
+                <mat-select formControlName="type">
+                  <mat-option value="Launch">Launch</mat-option>
+                  <mat-option value="Dinner">Dinner</mat-option>
+                </mat-select>
+              </mat-form-field>
+        </div>
+        <div class="col-sm-1"></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10">
+            <mat-form-field appearance="outline">
+                <mat-label>From Time</mat-label>
+                <input matInput type="time" placeholder="Enter Latitude Value" formControlName="from_time">
+              </mat-form-field>
+        </div>
+        <div class="col-sm-1"></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10">
+            <mat-form-field appearance="outline">
+                <mat-label>To Time</mat-label>
+                <input matInput type="time" placeholder="Enter Latitude Value" formControlName="to_time">
+              </mat-form-field>
+        </div>
+        <div class="col-sm-1"></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-3 text-center mt-4">
+            <mat-slide-toggle formControlName="status"><span class="launch">Status</span></mat-slide-toggle>
+        </div>
+        <div class="col-sm-7">
+            <mat-form-field appearance="outline">
+                <mat-label>Count</mat-label>
+                <input matInput placeholder="Enter Launch Slots" formControlName="count">
+            </mat-form-field>
+        </div>
+        <div class="col-sm-1"></div>
+    </div>
+
+    <div class="text-center mt-2 mb-2">
+        <button mat-raised-button color="primary" [disabled]="this.UpdateSlotForm.invalid">Edit & Save</button>&nbsp;
+        <button mat-raised-button color="warn" mat-dialog-close>Cancel</button>
+    </div>
+    </form>
+</div>
+
+

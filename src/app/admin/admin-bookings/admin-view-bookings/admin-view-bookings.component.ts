@@ -8,6 +8,8 @@ import { AdminService } from 'src/app/shared/services/admin.service';
 import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import { AdminAddBookingsComponent } from '../admin-add-bookings/admin-add-bookings.component';
+import { EditBookingsComponent } from '../edit-bookings/edit-bookings.component';
+import { AdminDeleteBookingsComponent } from '../admin-delete-bookings/admin-delete-bookings.component';
 
 
 
@@ -19,7 +21,7 @@ import { AdminAddBookingsComponent } from '../admin-add-bookings/admin-add-booki
 })
 export class AdminViewBookingsComponent {
 
-  displayedColumns:string[] =['Id','user','employeeId','branch','bookingDate','launchStatus','DinnerStatus','slot','createdDate','modifiedDate','action']
+  displayedColumns:string[] =['Id','user','employeeId','branch','bookingDate','launchStatus','DinnerStatus','slot','action']
   dataSource!:MatTableDataSource<any>
   @ViewChild(MatPaginator) paginator!:MatPaginator
   @ViewChild(MatSort) sort!:MatSort
@@ -28,7 +30,9 @@ export class AdminViewBookingsComponent {
 
   constructor(private AdminApi:AdminService,public dialog:MatDialog) {
 
-    this.AdminApi.showBookings().subscribe((res:any)=>{
+    this.AdminApi.ViewBookings().subscribe((res:any)=>{
+console.log(res,"booo");
+
       this.Bookings = res;
       this.dataSource = new MatTableDataSource(this.Bookings)
       this.dataSource.paginator = this.paginator
@@ -46,8 +50,22 @@ export class AdminViewBookingsComponent {
   }
   add(){
     this.dialog.open(AdminAddBookingsComponent,{
-      width:"70%",
-      height:"50%"
+      width:"40%",
+      height:"89%"
+    })
+  }
+  Edit(e:any){
+    this.dialog.open(EditBookingsComponent,{
+      width:"40%",
+      height:"89%",
+      data:e
+    })
+  }
+  Delete(d:any){
+    this.dialog.open(AdminDeleteBookingsComponent,{
+      width:"25%",
+      height:"32%",
+      data:d
     })
   }
 }

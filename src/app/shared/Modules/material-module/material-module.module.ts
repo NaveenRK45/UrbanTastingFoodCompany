@@ -8,6 +8,11 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { MatSortModule } from '@angular/material/sort';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {MatSelectModule} from '@angular/material/select';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
+
 
 
 const materialComponents: any[] | Type<any> | ModuleWithProviders<{}>=[
@@ -18,7 +23,11 @@ const materialComponents: any[] | Type<any> | ModuleWithProviders<{}>=[
   MatFormFieldModule,
   MatInputModule,
   MatSortModule,
-  MatDialogModule
+  MatDialogModule,
+  MatSlideToggleModule,
+  MatSelectModule,
+  MatDatepickerModule,
+  MatNativeDateModule
   
 ]
 

@@ -5,6 +5,9 @@ import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { AdminService } from 'src/app/shared/services/admin.service';
 import { AdminAddBookingsComponent } from '../../admin-bookings/admin-add-bookings/admin-add-bookings.component';
+import { AdminAddBranchesComponent } from '../admin-add-branches/admin-add-branches.component';
+import { AdminEditBranchesComponent } from '../admin-edit-branches/admin-edit-branches.component';
+import { AdminDeleteBranchesComponent } from '../admin-delete-branches/admin-delete-branches.component';
 
 @Component({
   selector: 'app-admin-view-branches',
@@ -21,7 +24,7 @@ export class AdminViewBranchesComponent {
 
 
   constructor(private AdminApi:AdminService,public dialog:MatDialog){
-    this.AdminApi.showBookings().subscribe((res:any)=>{
+    this.AdminApi.ViewBranch().subscribe((res:any)=>{
       this.Bookings = res;
       this.dataSource = new MatTableDataSource(this.Bookings)
       this.dataSource.paginator = this.paginator
@@ -29,9 +32,9 @@ export class AdminViewBranchesComponent {
     })
   }
   add(){
-    this.dialog.open(AdminAddBookingsComponent,{
-      width:"70%",
-      height:"50%"
+    this.dialog.open(AdminAddBranchesComponent,{
+      width:"40%",
+      height:"89%"
     })
   }
   applyFilter(event: Event) {
@@ -41,5 +44,19 @@ export class AdminViewBranchesComponent {
     if (this.dataSource.paginator) {
       this.dataSource.paginator.firstPage();
     }
+  }
+  Edit(e:any){
+    this.dialog.open(AdminEditBranchesComponent,{
+      width:"40%",
+      height:"89%",
+      data:e
+    })
+  }
+  Delete(d:any){
+    this.dialog.open(AdminDeleteBranchesComponent,{
+      width:"25%",
+      height:"32%",
+      data:d
+    })
   }
 }

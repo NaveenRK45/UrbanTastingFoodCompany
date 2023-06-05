@@ -1,1 +1,106 @@
-<p>edit-bookings works!</p>
+<div class="container">
+    <div class="row mb-4 header">
+        <h3 class="head">URBAN TASTING FOOD COMPANY</h3>
+    </div>
+    <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-5">
+            <mat-form-field appearance="outline">
+                <mat-label>User</mat-label>
+                <mat-select>
+                    <mat-option value="Booked By User">Booked By User</mat-option>
+                    <mat-option value="Not Avaliable">Not Avaliable</mat-option>
+                  </mat-select>
+              </mat-form-field>
+        </div>
+        <div class="col-sm-5">
+            <mat-form-field appearance="outline">
+            <mat-label>Branch</mat-label>
+            <mat-select>
+                <mat-option value="0">not available</mat-option>
+                <mat-option value="1">available</mat-option>
+                <mat-option value="2">booked By User</mat-option>
+                <mat-option value="3">Cancelled</mat-option>
+                <mat-option value="4">Confirmed</mat-option>
+              </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="col-sm-1"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10">
+            <mat-form-field appearance="outline">
+                <mat-label>Booking Date</mat-label>
+                <input matInput [matDatepicker]="picker">
+                <mat-datepicker-toggle matIconSuffix [for]="picker">
+                  <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+                </mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+        </div>
+        <div class="col-sm-1"></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-5">
+            <mat-form-field appearance="outline">
+            <mat-label>Launch Status</mat-label>
+            <mat-select>
+                <mat-option value="0">not available</mat-option>
+                <mat-option value="1">available</mat-option>
+                <mat-option value="2">booked By User</mat-option>
+                <mat-option value="3">Cancelled</mat-option>
+                <mat-option value="4">Confirmed</mat-option>
+              </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="col-sm-5">
+            <mat-form-field appearance="outline">
+                <mat-label>Dinner Status</mat-label>
+                <mat-select>
+                    <mat-option value="0">not available</mat-option>
+                    <mat-option value="1">available</mat-option>
+                    <mat-option value="2">booked By User</mat-option>
+                    <mat-option value="3">Cancelled</mat-option>
+                    <mat-option value="4">Confirmed</mat-option>
+                  </mat-select>
+                </mat-form-field>
+        </div>
+        <div class="col-sm-1"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10">
+            <mat-form-field appearance="outline">
+            <mat-label>Slots</mat-label>
+            <mat-select>
+                <mat-option value="12-30PM-01-00PM ">12-30PM-01-00PM</mat-option>
+                <mat-option value="01-00PM-01-30PM">01-00PM-01-30PM</mat-option>
+                <mat-option value="01-30PM-02-00PM">01-30PM-02-00PM</mat-option>
+              </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="col-sm-1"></div>
+    </div>
+
+    <div class="row mb-4 mt-2 px-3">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10">
+            <div class="col-sm-3 text-center">
+                <mat-slide-toggle><span class="launch">Status</span></mat-slide-toggle>
+            </div>
+        </div>
+        <div class="col-sm-1"></div>
+    </div>
+
+    <div class="text-center mt-4">
+        <button mat-raised-button color="primary">Edit & Save-Bookings</button>&nbsp;
+        <button mat-raised-button color="warn" mat-dialog-close>Cancel</button>
+    </div>
+</div>
+
+
+
