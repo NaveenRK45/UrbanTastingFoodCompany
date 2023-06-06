@@ -31,8 +31,6 @@ export class AdminViewBookingsComponent {
   constructor(private AdminApi:AdminService,public dialog:MatDialog) {
 
     this.AdminApi.ViewBookings().subscribe((res:any)=>{
-console.log(res,"booo");
-
       this.Bookings = res;
       this.dataSource = new MatTableDataSource(this.Bookings)
       this.dataSource.paginator = this.paginator

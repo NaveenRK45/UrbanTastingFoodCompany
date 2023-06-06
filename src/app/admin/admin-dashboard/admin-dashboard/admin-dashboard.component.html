@@ -3,7 +3,7 @@
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
-    <mat-toolbar>Menu</mat-toolbar>
+        <img src="assets/images/logo1.png" width="100%" height="15%" alt="IMG" loading="lazy"/>
     <ng-container>
       <div class="admin">
         <img src="assets/images/adminlogo.jpeg" class="rounded-circle user-img" alt="IMG" loading="lazy"/>
@@ -21,8 +21,6 @@
       <a mat-list-item class="links" routerLink="View-Users" routerLinkActive="active"><i class="fa fa-users" aria-hidden="true"></i>&nbsp;Users</a>
       <a mat-list-item class="links" routerLink="View-Branches" routerLinkActive="active"><i class="fa fa-building" aria-hidden="true"></i>&nbsp;Branches</a>
       <a mat-list-item class="links" routerLink="View-Slots" routerLinkActive="active"><i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp;Slots</a>
-      <!-- <a mat-list-item routerLink="admin-home" routerLinkActive="active"><i class="fa fa-cogs" aria-hidden="true"></i>&nbsp;Management</a> -->
-
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -35,7 +33,12 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>UrbanTastingFoodCompany</span>
+
+      <span class="space"></span>
+      <span>
+        <img src="assets/images/adminlogo.jpeg" class="rounded-circle user-img" alt="IMG" loading="lazy"/>
+        &nbsp; Admin
+      </span>
     </mat-toolbar>
     <ng-container>
       <router-outlet></router-outlet>

@@ -73,7 +73,7 @@
             <mat-form-field appearance="outline" >
             <mat-label>Slots</mat-label>
             <mat-select formControlName="slot">
-                <mat-option *ngFor="let s of Slots" value="{{s._id}}">{{s.slot_name}}</mat-option>
+                <mat-option *ngFor="let s of Slots" value="{{s.from_time}} - {{s.to_time}}">{{s.from_time}} - {{s.to_time}}</mat-option>
               </mat-select>
             </mat-form-field>
         </div>

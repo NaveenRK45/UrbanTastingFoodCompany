@@ -29,19 +29,19 @@ export class AdminAddBranchesComponent implements OnInit{
   }
   AddBranch(){
     if(this.AddBranchForm.value.lunch == true){
-      this.AddBranchForm.value.lunch = 1;
+      this.AddBranchForm.value.lunch = 'Yes';
     }else{
-      this.AddBranchForm.value.lunch = 0;
+      this.AddBranchForm.value.lunch = 'No';
     }
     if(this.AddBranchForm.value.dinner == true){
-      this.AddBranchForm.value.dinner = 1;
+      this.AddBranchForm.value.dinner = 'Yes';
     }else{
-      this.AddBranchForm.value.dinner = 0;
+      this.AddBranchForm.value.dinner = 'No';
     }
     if(this.AddBranchForm.value.status == true){
-      this.AddBranchForm.value.status = 1;
+      this.AddBranchForm.value.status = 'Yes';
     }else{
-      this.AddBranchForm.value.status = 0;
+      this.AddBranchForm.value.status = 'No';
     }
 
 let data ={

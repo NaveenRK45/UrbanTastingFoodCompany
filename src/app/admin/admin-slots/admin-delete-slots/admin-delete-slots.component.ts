@@ -11,7 +11,6 @@ export class AdminDeleteSlotsComponent {
   constructor(@Inject(MAT_DIALOG_DATA) public data:any,private Api:AdminService){}
   deleteRecord(){
     this.Api.DeleteSlots(this.data._id).subscribe((res:any)=>{
-      window.alert("Are You Sure Want to Delete This Record ?")
       window.location.reload()
     })
 

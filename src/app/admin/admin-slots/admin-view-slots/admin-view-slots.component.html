@@ -6,17 +6,17 @@
 <div class="body">
     <div class="card">
     <div class="row add">
-        <div class="col-sm-2 mb-1">
+        <div class="col-sm-2 mb-2">
             <button mat-raised-button color="primary" (click)="add()"> <i class="fa fa-plus-circle" aria-hidden="true"></i>&nbsp;Add</button>
         </div>
         <div class="col-sm-7"></div>
-        <div class="col-sm-3">
+        <div class="col-sm-3 mb-2">
                 <input (keyup)="applyFilter($event)" class="input-field form-control" type="text" placeholder="Enter Search Data" #input>
         </div>
     </div> 
     <div class="table-responsive">
     <div class="mat-elevation-z8">
-        <table mat-table [dataSource]="dataSource" matSort class="table table-bordered">
+        <table mat-table [dataSource]="dataSource" matSort class="table table-bordered table-striped m-1">
     
         <ng-container matColumnDef="Id">
             <th mat-header-cell *matHeaderCellDef mat-sort-header > S.No </th>

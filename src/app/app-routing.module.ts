@@ -15,9 +15,15 @@ import { AdminEditSlotsComponent } from './admin/admin-slots/admin-edit-slots/ad
 import { AdminViewSlotsComponent } from './admin/admin-slots/admin-view-slots/admin-view-slots.component';
 import { AdminDeleteSlotsComponent } from './admin/admin-slots/admin-delete-slots/admin-delete-slots.component';
 import { AdminHomeComponent } from './admin/admin-home/admin-home.component';
+import { AdminLoginComponent } from './admin/admin-login/admin-login.component';
+import { HomePageComponent } from './Welcome-Page/home-page/home-page.component';
 
 const routes: Routes = [
-  {path:'',redirectTo:'admin',pathMatch:'full'},
+    { path: '', redirectTo: 'Welcome-Page', pathMatch: 'full' },
+  { path: 'Welcome-Page', component: HomePageComponent },
+  { path: 'admin-login', component: AdminLoginComponent},
+
+
   {path:'admin',component:AdminDashboardComponent,children:[
   {path:'',redirectTo:'home',pathMatch:'full'},
     {path:'home',component:AdminHomeComponent},

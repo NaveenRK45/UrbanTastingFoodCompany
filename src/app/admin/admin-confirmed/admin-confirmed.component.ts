@@ -15,13 +15,13 @@ export class AdminConfirmedComponent {
   dataSource!:MatTableDataSource<any>
   @ViewChild(MatPaginator) paginator!:MatPaginator
   @ViewChild(MatSort) sort!:MatSort
-  Bookings:any;
+  cbookings:any
 
 
   constructor(private AdminApi:AdminService,public dialog:MatDialog){
-    this.AdminApi.ViewConfirmed().subscribe((res:any)=>{
-      this.Bookings = res;
-      this.dataSource = new MatTableDataSource(this.Bookings)
+    this.AdminApi.ViewBookings().subscribe((res:any)=>{
+      this.cbookings=res.filter((x:any)=>x.lunch_status==4 || x.dinner_status ==4)        
+      this.dataSource = new MatTableDataSource(this.cbookings)
       this.dataSource.paginator = this.paginator
       this.dataSource.sort = this.sort
     })

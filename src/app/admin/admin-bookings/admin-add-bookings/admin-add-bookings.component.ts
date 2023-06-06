@@ -38,6 +38,19 @@ export class AdminAddBookingsComponent implements OnInit {
     })
   }
   AddBookings(){
+    // if(this.AddBookingsForm.value.lunch_status == 0){
+    //     this.AddBookingsForm.value.lunch_status = 'not available'    
+    // }else if(this.AddBookingsForm.value.lunch_status == 1){
+    //   this.AddBookingsForm.value.lunch_status = 'available'
+    // }else if(this.AddBookingsForm.value.lunch_status == 2){
+    //   this.AddBookingsForm.value.lunch_status = 'booked By User'
+    // }else if(this.AddBookingsForm.value.lunch_status == 3){
+    //   this.AddBookingsForm.value.lunch_status = 'Cancelled'
+    // }else if(this.AddBookingsForm.value.lunch_status == 4){
+    //   this.AddBookingsForm.value.lunch_status = 'Confirmed'
+    // }
+
+
     if(this.AddBookingsForm.value.Status == true){
       this.AddBookingsForm.value.Status=1
     }else{
@@ -48,15 +61,16 @@ export class AdminAddBookingsComponent implements OnInit {
       ...this.AddBookingsForm.value,
       booked_by:'admin'
     }
-    console.log(A,"A value");
     
 
     if(this.AddBookingsForm.valid){
       this.Api.AddBookings(A).subscribe((res:any)=>{
-        console.log(res,"ass");
-        
-        // alert("Booking Added Suucessfully")
-        // window.location.reload()
+        if(res){
+          alert("Booking Added Suucessfully")
+          window.location.reload()
+        } else{
+          alert("Not booked")
+        }       
       })
     }
   }

@@ -12,7 +12,6 @@ export class AdminDeleteBranchesComponent {
 
   deleteRecord(){
     this.Api.DeleteBranch(this.data._id).subscribe((res:any)=>{
-      window.alert("Are You Sure Want to Delete This Record ?")
       window.location.reload()
     })
   }
