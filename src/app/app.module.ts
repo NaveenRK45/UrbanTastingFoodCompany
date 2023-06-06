@@ -28,6 +28,8 @@ import { MaterialModuleModule } from './shared/Modules/material-module/material-
 import { AdminHomeComponent } from './admin/admin-home/admin-home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { AdminLoginComponent } from './admin/admin-login/admin-login.component';
+import { HomePageComponent } from './Welcome-Page/home-page/home-page.component';
 
 
 @NgModule({
@@ -49,6 +51,8 @@ import { HttpClientModule } from '@angular/common/http';
     AdminDeleteSlotsComponent,
     AdminViewSlotsComponent,
     AdminHomeComponent,
+    AdminLoginComponent,
+    HomePageComponent,
 
 
   ],

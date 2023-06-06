@@ -7,9 +7,8 @@ import { Injectable } from '@angular/core';
 export class AdminService {
 
   constructor(private http:HttpClient) { }
-
-  AdminLogin(username:any,password:any){
-    return this.http.get('http://localhost:5000/admin/login?username='+ username+'&password='+password)
+  Adminlogin(data:any){
+    return this.http.post('http://localhost:5000/admin/addbranch',data)
   }
   AddBranch(data:any){
     return this.http.post('http://localhost:5000/admin/addbranch',data)
@@ -47,13 +46,7 @@ export class AdminService {
   DeleteBookings(id:any){
     return this.http.delete('http://localhost:5000/admin/deletebooking/'+id)
   }
-  
-  ViewConfirmed(){
-    return this.http.get('http://localhost:5000/admin/showbookings')
-  }
   ViewUsers(){
     return this.http.get('http://localhost:5000/admin/showusers')
   }
-
-
 }

@@ -44,19 +44,19 @@ export class AdminEditBranchesComponent implements OnInit{
   }
   UpdateBranch(){
     if(this.UpdateBranchForm.value.lunch == true){
-      this.UpdateBranchForm.value.lunch = 1;
+      this.UpdateBranchForm.value.lunch = 'Yes';
     }else{
-      this.UpdateBranchForm.value.lunch = 0;
+      this.UpdateBranchForm.value.lunch = 'No';
     }
     if(this.UpdateBranchForm.value.dinner == true){
-      this.UpdateBranchForm.value.dinner = 1;
+      this.UpdateBranchForm.value.dinner = 'Yes';
     }else{
-      this.UpdateBranchForm.value.dinner = 0;
+      this.UpdateBranchForm.value.dinner = 'No';
     }
     if(this.UpdateBranchForm.value.status == true){
-      this.UpdateBranchForm.value.status = 1;
+      this.UpdateBranchForm.value.status = 'Yes';
     }else{
-      this.UpdateBranchForm.value.status = 0;
+      this.UpdateBranchForm.value.status = 'No';
     }
 
     const U ={
