@@ -30,6 +30,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AdminLoginComponent } from './admin/admin-login/admin-login.component';
 import { HomePageComponent } from './Welcome-Page/home-page/home-page.component';
+import { UserLoginComponent } from './users/user-login/user-login.component';
+import { UserSignupComponent } from './users/user-signup/user-signup.component';
+import { UserDashboardComponent } from './users/user-dashboard/user-dashboard.component';
+import { MatButtonModule } from '@angular/material/button';
+import { UserEmailVerifyComponent } from './users/user-email-verify/user-email-verify.component';
+import { UserSelectLocationComponent } from './users/user-select-location/user-select-location.component';
+import { UserOrderDetailsComponent } from './users/user-order-details/user-order-details.component';
+import { UserBookingsComponent } from './users/user-bookings/user-bookings.component';
+import { UserConfirmComponent } from './users/user-confirm/user-confirm.component';
+import { UserCancelComponent } from './users/user-cancel/user-cancel.component';
 
 
 @NgModule({
@@ -53,6 +63,15 @@ import { HomePageComponent } from './Welcome-Page/home-page/home-page.component'
     AdminHomeComponent,
     AdminLoginComponent,
     HomePageComponent,
+    UserLoginComponent,
+    UserSignupComponent,
+    UserDashboardComponent,
+    UserEmailVerifyComponent,
+    UserSelectLocationComponent,
+    UserOrderDetailsComponent,
+    UserBookingsComponent,
+    UserConfirmComponent,
+    UserCancelComponent,
 
 
   ],
@@ -69,7 +88,8 @@ import { HomePageComponent } from './Welcome-Page/home-page/home-page.component'
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    MaterialModuleModule
+    MaterialModuleModule,
+    MatButtonModule
     
   ],
   providers: [],
