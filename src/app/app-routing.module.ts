@@ -17,11 +17,27 @@ import { AdminDeleteSlotsComponent } from './admin/admin-slots/admin-delete-slot
 import { AdminHomeComponent } from './admin/admin-home/admin-home.component';
 import { AdminLoginComponent } from './admin/admin-login/admin-login.component';
 import { HomePageComponent } from './Welcome-Page/home-page/home-page.component';
+import { UserLoginComponent } from './users/user-login/user-login.component';
+import { UserSignupComponent } from './users/user-signup/user-signup.component';
+import { UserEmailVerifyComponent } from './users/user-email-verify/user-email-verify.component';
+import { UserSelectLocationComponent } from './users/user-select-location/user-select-location.component';
+import { UserOrderDetailsComponent } from './users/user-order-details/user-order-details.component';
+import { UserBookingsComponent } from './users/user-bookings/user-bookings.component';
+import { UserCancelComponent } from './users/user-cancel/user-cancel.component';
+import { UserConfirmComponent } from './users/user-confirm/user-confirm.component';
 
 const routes: Routes = [
     { path: '', redirectTo: 'Welcome-Page', pathMatch: 'full' },
   { path: 'Welcome-Page', component: HomePageComponent },
   { path: 'admin-login', component: AdminLoginComponent},
+  {path:'user-login',component:UserLoginComponent},
+  {path:'user-signup',component:UserSignupComponent},
+  {path:'user-emailCheck',component:UserEmailVerifyComponent},
+  {path:'user-location',component:UserSelectLocationComponent},
+  {path:'user-foodDetails',component:UserOrderDetailsComponent},
+  {path:'user-bookings',component:UserBookingsComponent},
+  {path:'user-cancel',component:UserCancelComponent},
+  {path:'user-confirm',component:UserConfirmComponent},
 
 
   {path:'admin',component:AdminDashboardComponent,children:[

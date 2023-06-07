@@ -1,0 +1,45 @@
+.main{
+    background-color: antiquewhite;
+}
+.bg-image-vertical {
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: auto 100%;
+    }
+    
+    @media (min-width: 1025px) {
+    .h-custom-2 {
+    height: 100%;
+    }
+    }
+.btn{
+    background-color: rgb(214, 169, 55);
+    color: white;
+    font-size: 14px;
+    border-radius: 16px;
+}
+.text-muted{
+    text-decoration: none;
+    font-weight: 600;
+}
+.link{
+    color: rgb(214, 169, 55);
+    font-weight: 500;
+}
+.email{
+    position: absolute;
+    margin-top: 40px;
+    margin-left: 9px;
+    font-size: 1.3rem;
+}
+.mobile{
+    position: absolute;
+    margin-top: 36px;
+    margin-left: 10px;
+    font-size: 2rem;
+}
+
+
+
