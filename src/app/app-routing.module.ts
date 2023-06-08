@@ -32,7 +32,7 @@ const routes: Routes = [
   { path: 'admin-login', component: AdminLoginComponent},
   {path:'user-login',component:UserLoginComponent},
   {path:'user-signup',component:UserSignupComponent},
-  {path:'user-emailCheck',component:UserEmailVerifyComponent},
+  {path:'verify',component:UserEmailVerifyComponent},
   {path:'user-location',component:UserSelectLocationComponent},
   {path:'user-foodDetails',component:UserOrderDetailsComponent},
   {path:'user-bookings',component:UserBookingsComponent},
