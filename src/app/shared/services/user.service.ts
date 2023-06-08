@@ -14,8 +14,14 @@ export class UserService {
   Login(data:any){
     return this.http.post('http://localhost:5000/user/login',data)
   }
-  EmailVerify(){
-    return this.http.get('http://localhost:5000/user/verify')
+  getProfile(id:any){
+    return this.http.get('http://localhost:5000/user/getprofile/'+id)
+  }
+  EmailVerify(id:any){
+    return this.http.get('http://localhost:5000/user/verify?id='+id)
+  }
+  getBranches(){
+    return this.http.get('http://localhost:5000/user/branches')
   }
   MakeOrder(data:any){
     return this.http.post('http://localhost:5000/user/booking',data)

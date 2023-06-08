@@ -1,0 +1,38 @@
+.container-fluid{
+    // background-color:rgb(184, 181, 179);
+    background-color: blue;
+}
+.card{
+    width: 90%;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.greetings{
+    text-align: center;
+    font-family: system-ui;
+    letter-spacing: 2px;
+}
+.msg{
+    text-align: center;
+}
+.btn{
+    width: 50%;
+    background-color: #007FFF;
+    color: white;
+    margin: auto;
+    border-radius: inherit;
+    margin-bottom: 1.5rem;
+    box-shadow: 2px 4px #6e6b6b;
+}
+.profile{
+    font-family: serif;
+    color: currentcolor;
+}
+.img{
+    width: 40%;
+    height: 70px;
+    margin: auto;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
