@@ -17,6 +17,9 @@ export class UserService {
   getProfile(id:any){
     return this.http.get('http://localhost:5000/user/getprofile/'+id)
   }
+  updateProfile(id:any,data:any){
+    return this.http.put('http://localhost:5000/user/profile/'+id,data)
+  }
   EmailVerify(id:any){
     return this.http.get('http://localhost:5000/user/verify?id='+id)
   }

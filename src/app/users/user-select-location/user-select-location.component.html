@@ -6,14 +6,14 @@
     </div>
     <div class="row">
         <div class="w-50" *ngFor="let b of Branches">
-            <div class="card bg-comman mb-2" (click)="selectLocation()" >
+            <div class="card bg-comman mb-2" (click)="selectLocation(b._id)" >
                 <div class="card-body">
                     <h4 class="text-center mt-4 branch">{{b.location}}</h4>
                 </div>
             </div>
         </div>
         <div class="text-center mt-4 mb-4">
-            <button class="button">Confirm</button>
+            <button class="button" routerLink="/user-foodDetails">Confirm</button>
         </div>
     </div>
 </div>
