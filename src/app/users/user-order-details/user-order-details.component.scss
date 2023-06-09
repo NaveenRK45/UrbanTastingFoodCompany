@@ -1,0 +1,91 @@
+.container-fluid{
+    background-color: antiquewhite;
+}
+.details{
+    background-color: antiquewhite;
+}
+.head4{
+    font-size: 16px;
+    margin-top: 10px;
+    font-weight: 600;
+    font-family: inherit;
+    letter-spacing: 0.5px;
+    margin-left: 1px;
+}
+.card{
+    width: 94%;
+    margin: auto;
+    margin-bottom: 0.5rem;
+}
+.launch{
+    background-color: #007FFF;
+    border-radius: 12px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    color: white;
+    border-color: #007FFF;
+    width: 5rem;
+}
+.dinner{
+    background-color: #007FFF;
+    border-radius: 12px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    color: white;
+    border-color: #007FFF;
+    width: 5rem;
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 20
+}
+hr{
+    width: 25%;
+    margin: auto;
+    color: black;
+    margin-bottom: 20px;
+    outline: inset;
+    border-radius: 5px;
+}
+.img{
+    background-image: url('/assets/images/user-bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-end-end-radius: 20px;
+    border-end-start-radius: 20px;
+}
+.logout{
+    background-color: #fff;
+    width: 10%;
+    border-radius: 7px;
+    padding: 5px;
+}
+.fa-power-off{
+    font-size: 16px;
+}
+.fa-map-marker{
+    font-size: 16px;
+    margin-right: 8px;
+}
+.relocate{
+    background-color: goldenrod;
+    padding: 4px;
+    border-color: goldenrod;
+    border-radius: 12px;
+    color: white;
+    font-size: 12px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 6px;
+    padding-right: 6px;
+    letter-spacing: 0.5px;
+}
+.ft{
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}

@@ -1,2 +1,45 @@
-<a class="btn btn-white btn1 m-1" routerLink="/user-bookings" routerLinkActive="active">Bookings</a>
-
+<!-- <a class="btn btn-white btn1 m-1" routerLink="/user-bookings" routerLinkActive="active">Bookings</a> -->
+<div class="container-fluid">
+    <div class="row img">
+        <div class="position mt-4 mb-1">
+            <button class="logout float-end" (click)="logout()"><i class="fa fa-power-off" aria-hidden="true"></i></button>
+        </div>
+        <h4 style="color:white;font-size: 16px;font-family: unset;margin-left: 10px;">Welcome,{{users.emp_name}}</h4>
+        <div class="row mb-2">
+            <div class="col-1"></div>
+            <div class="col-6 mt-1">
+                <h5 style="color:goldenrod;font-size: 15px;font-weight: 600;"><i class="fa fa-map-marker" aria-hidden="true"></i>{{Branch.branch.location}}</h5>
+            </div>
+            <div class="col-1">
+                <button class="relocate" (click)="reLocate()">Relocate</button>
+            </div>
+            
+        </div>
+    </div>
+    <div class="row details">
+        <h4 class="head4 mb-2">Your Ordered Food Details</h4>
+        <div class="card">
+            <div class="row">
+                <div class="col-3 mt-4 text-center">
+                    <h4><b>25</b><br><span>March</span></h4>
+                </div>
+                <div class="col-1"></div>
+                <div class="col-3 mt-4">
+                    <button class="launch" (click)="lunch()">LUNCH</button>
+                </div>
+                <div class="col-1"></div>
+                <div class="col-3 mt-4">
+                    <button class="dinner" (click)="dinner()">DINNER</button>
+                </div>
+                <div class="col-1"></div>
+            </div>
+        </div>
+        <footer class="mt-4"> 
+            <div class="text-center">
+                <img src="/assets/images/logo2.png" alt="" width="8%">&nbsp;
+                <span class="ft">Urban Tasting Food Company</span>
+                <hr>
+              </div>
+        </footer>
+    </div>
+</div>
