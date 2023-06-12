@@ -12,15 +12,26 @@ import { UserConfirmComponent } from '../user-confirm/user-confirm.component';
 export class UserOrderDetailsComponent implements OnInit{
   users:any
   Branch:any
+  myDate:any
+  week:any=[]
+  selectedIndex=0;
 
 constructor(private Api:UserService,private routes:Router,private dialog:MatDialog){}
 
   ngOnInit(): void {
     this.users = JSON.parse(localStorage.getItem('UTFC-User')!)
     this.Api.getProfile(this.users._id).subscribe((res:any)=>{
-      console.log(res,"profile");
       this.Branch = res;      
     })
+   
+    let curr = new Date() 
+
+  for (let i = 1; i <= 7; i++) {
+    let first = curr.getDate() - curr.getDay() + i 
+    let day = new Date(curr.setDate(first)).toISOString().slice(0, 10)
+    this.week.push(day)
+  }
+  
 
   }
   lunch(){
@@ -33,7 +44,8 @@ constructor(private Api:UserService,private routes:Router,private dialog:MatDial
   dinner(){
     this.dialog.open(UserConfirmComponent,{
       width:"80%",
-      height:"85%"
+      height:"85%",
+      // data:d
     })
   }
   reLocate(){

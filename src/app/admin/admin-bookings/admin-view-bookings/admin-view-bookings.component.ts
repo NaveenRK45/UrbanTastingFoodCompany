@@ -32,6 +32,8 @@ export class AdminViewBookingsComponent {
 
     this.AdminApi.ViewBookings().subscribe((res:any)=>{
       this.Bookings = res;
+      console.log(res,"check");
+      
       this.dataSource = new MatTableDataSource(this.Bookings)
       this.dataSource.paginator = this.paginator
       this.dataSource.sort = this.sort
