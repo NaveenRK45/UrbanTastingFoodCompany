@@ -4,7 +4,7 @@
         <div class="position mt-4 mb-1">
             <button class="logout float-end" (click)="logout()"><i class="fa fa-power-off" aria-hidden="true"></i></button>
         </div>
-        <h4 style="color:white;font-size: 16px;font-family: unset;margin-left: 10px;">Welcome,{{users.emp_name}}</h4>
+        <h4 style="color:white;font-size: 16px;font-family: unset;">Welcome,{{users.emp_name}}</h4>
         <div class="row mb-2">
             <div class="col-1"></div>
             <div class="col-6 mt-1">
@@ -18,10 +18,11 @@
     </div>
     <div class="row details">
         <h4 class="head4 mb-2">Your Ordered Food Details</h4>
-        <div class="card">
+        <div >
+        <div class="card" *ngFor="let w of week">
             <div class="row">
                 <div class="col-3 mt-4 text-center">
-                    <h4><b>25</b><br><span>March</span></h4>
+                    <h4><b>{{w | date:'d'}}</b><br><span>{{w | date:'LLL'}}</span></h4>
                 </div>
                 <div class="col-1"></div>
                 <div class="col-3 mt-4">
@@ -34,6 +35,7 @@
                 <div class="col-1"></div>
             </div>
         </div>
+    </div>
         <footer class="mt-4"> 
             <div class="text-center">
                 <img src="/assets/images/logo2.png" alt="" width="8%">&nbsp;
