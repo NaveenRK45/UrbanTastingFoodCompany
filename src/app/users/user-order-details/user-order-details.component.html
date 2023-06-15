@@ -26,11 +26,15 @@
                 </div>
                 <div class="col-1"></div>
                 <div class="col-3 mt-4">
-                    <button class="launch" (click)="lunch()">LUNCH</button>
+                    <button class="blue" 
+                            (click)="lunch(w)"
+                            [ngClass]="{'blue': buttonCondition === 'condition1', 'green':buttonCondition === 'condition2','red':buttonCondition === 'condition3'}"
+                            >LUNCH
+                    </button>
                 </div>
                 <div class="col-1"></div>
                 <div class="col-3 mt-4">
-                    <button class="dinner" (click)="dinner()">DINNER</button>
+                    <button class="dinner" (click)="dinner(w)">DINNER</button>
                 </div>
                 <div class="col-1"></div>
             </div>

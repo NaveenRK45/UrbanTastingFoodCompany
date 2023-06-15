@@ -3,11 +3,11 @@
     <span class="dashboard">Slots</span>
     <span class="path">Home &nbsp;/&nbsp;<span style="color: #3f51b5;">Slots</span></span>
 </div>
-<div class="body">
-    <div class="card">
+<!-- <div class="body"> -->
+    <div class="card mt-5">
     <div class="row add">
-        <div class="col-sm-2 mb-2">
-            <button mat-raised-button color="primary" (click)="add()"> <i class="fa fa-plus-circle" aria-hidden="true"></i>&nbsp;Add</button>
+        <div class="col-sm-2 mb-1">
+            <button class="button btn btn-sm" (click)="add()"> <i class="fa fa-plus-circle" aria-hidden="true"></i>&nbsp;Add</button>
         </div>
         <div class="col-sm-7"></div>
         <div class="col-sm-3 mb-2">
@@ -15,41 +15,41 @@
         </div>
     </div> 
     <div class="table-responsive">
-    <div class="mat-elevation-z8">
+    <!-- <div class="mat-elevation-z8"> -->
         <table mat-table [dataSource]="dataSource" matSort class="table table-bordered table-striped m-1">
     
         <ng-container matColumnDef="Id">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header > S.No </th>
+            <th mat-header-cell *matHeaderCellDef mat-sort-header class="sno"> S.No </th>
             <td mat-cell *matCellDef="let i=index"> {{i+1}} </td>
         </ng-container>
     
         <ng-container matColumnDef="sName">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header > Slot Name </th>
+            <th mat-header-cell *matHeaderCellDef mat-sort-header class="name"> Slot Name </th>
             <td mat-cell *matCellDef="let row"> {{row.slot_name}} </td>
         </ng-container>
 
         <ng-container matColumnDef="type">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header > Type </th>
+            <th mat-header-cell *matHeaderCellDef mat-sort-header class="type"> Type </th>
             <td mat-cell *matCellDef="let row"> {{row.type}} </td>
         </ng-container>
 
         <ng-container matColumnDef="fromTime">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header > From Time </th>
+            <th mat-header-cell *matHeaderCellDef mat-sort-header class="fTime"> From Time </th>
             <td mat-cell *matCellDef="let row"> {{row.from_time}} </td>
         </ng-container>
         
         <ng-container matColumnDef="toTime">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header > To Time </th>
+            <th mat-header-cell *matHeaderCellDef mat-sort-header class="tTime"> To Time </th>
             <td mat-cell *matCellDef="let row"> {{row.to_time}} </td>
         </ng-container>
         
         <ng-container matColumnDef="count">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header > Count </th>
+            <th mat-header-cell *matHeaderCellDef mat-sort-header class="count"> Count </th>
             <td mat-cell *matCellDef="let row"> {{row.count}} </td>
         </ng-container>
         
         <ng-container matColumnDef="status">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header> Status </th>
+            <th mat-header-cell *matHeaderCellDef mat-sort-header class="status"> Status </th>
             <td mat-cell *matCellDef="let row"> {{row.status}} </td>
         </ng-container>
         
@@ -66,21 +66,21 @@
     
 
         <tr class="mat-row" *matNoDataRow>
-            <td class="mat-cell" colspan="4">No data matching the filter{{input.value}}</td>
+            <td class="mat-cell" colspan="4" style="color: red;text-align: center;">No data matching the filter{{input.value}}</td>
         </tr>
         </table>
     
         <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+    <!-- </div> -->
     </div>
     </div>
-    </div>
 
 
 
 
 
-</div>
-<div class="row g-0">
+<!-- </div> -->
+<div class="row g-0 mt-5">
     <div class="ft text-center">
             <span>Copyright &#169; 2023 <a href="http://vitasoft.in" target="_blank" style="text-decoration: none;">VITA Technologies</a>. All Rights are Reserved</span>
     </div>

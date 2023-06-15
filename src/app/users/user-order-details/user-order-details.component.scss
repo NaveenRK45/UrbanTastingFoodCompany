@@ -17,7 +17,7 @@
     margin: auto;
     margin-bottom: 0.5rem;
 }
-.launch{
+.blue{
     background-color: #007FFF;
     border-radius: 12px;
     padding-top: 6px;
@@ -26,13 +26,22 @@
     border-color: #007FFF;
     width: 4.5rem;
 }
-.dinner{
-    background-color: #007FFF;
+.green{
+    background-color: green;
     border-radius: 12px;
     padding-top: 6px;
     padding-bottom: 6px;
     color: white;
-    border-color: #007FFF;
+    border-color: green;
+    width: 4.5rem;
+}
+.red{
+    background-color: red;
+    border-radius: 12px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    color: white;
+    border-color: red;
     width: 4.5rem;
 }
 .material-symbols-outlined {
@@ -88,4 +97,12 @@ hr{
     font-size: 11px;
     font-weight: 600;
     letter-spacing: 0.5px;
+}
+.isBooked{
+    background-color: green;
+    color: white;
+}
+.isCancel{
+    background-color: red;
+    color: white;
 }

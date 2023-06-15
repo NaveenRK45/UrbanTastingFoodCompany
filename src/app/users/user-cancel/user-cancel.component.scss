@@ -1,0 +1,53 @@
+.top{
+    margin-top: 20px;
+}
+.book{
+    margin-left: 2rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+.close{
+    float: right;
+    margin-right: 16px;
+    font-size: 18px;
+    color: rgb(211, 32, 32);
+}
+
+.closebtn{
+    border-radius: 16px;
+    background-color: #fff;
+    color: red;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    width: 100%;
+}
+.closebtn:hover{
+    border-radius: 16px;
+    background-color: red;
+    border-color: red;
+    border: 2px solid red;
+    color: #fff;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 25px;
+    padding-right: 25px;
+    width: 100%;
+    transform: scale(1.0);
+}
+.bookbtn{
+    border-radius: 16px;
+    background-color: rgb(227, 44, 44);
+    color: #fff;
+    border-color: rgb(227, 44, 44);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.text .text1{
+    font-size: 14px;
+    font-weight: 500;
+    font-family: sans-serif;
+}

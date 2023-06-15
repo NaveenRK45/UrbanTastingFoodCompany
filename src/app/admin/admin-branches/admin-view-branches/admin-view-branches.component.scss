@@ -7,18 +7,21 @@
     font-size: 1rem;
     margin-left: 2.5rem;
     font-weight: 500;
-    color: grey;
+    color: rgb(35, 33, 33);
 }
 .path{
     float: right;
     margin-right: 1.5rem;
     font-size: 14px;
 }
-.body{
-    background-color: #f7f7ff;
-}
+// .body{
+//     background-color: #f7f7ff;
+// }
 .card{
-    margin: 20px;
+    width: 95%;
+    margin: auto;
+    background: rgb(129,121,164);
+    background: linear-gradient(0deg, rgba(129,121,164,1) 11%, rgba(94,143,200,1) 45%);
 }
 .ft{
     background-color: #ebebeb;
@@ -37,25 +40,66 @@
   }
 .table{
     width: 100%;
+    margin: 10px;
 }
 .s.no{
-    width: 7%;
-}
-.location .lang .lati{
-    width: 10%;
-    text-align: center;
-}
-.launch .Dinnner .status{
     width: 5%;
-    text-align: center;
 }
-.launchSlot .DinnerSlot .radius{
+.location {
     width: 10%;
-    text-align: center;
+}
+.lang{
+    width: 10%;
+}
+.lati{
+    width: 10%;
+}
+.lunch{
+    width: 5%;
+}
+.Dinnner{
+    width: 5%;
+}
+.status{
+    width: 5%;
+}
+.launchSlot{
+    width: 10%;
+}
+.DinnerSlot{
+    width: 10%;
+}
+.radius{
+    width: 15%;
 }
 .action{
-    width: 18%;
+    width: 15%;
 }
-td{
-    color: blue;
+mat-paginator{
+    margin-left: 5px;
+    margin-right: -5px;
+    margin-bottom: 10px;
+  }
+  th{
+    color: #3f51b5;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+ .button{
+  background-color: #3f51b5;
+  border-color: #3f51b5;
+  border: 2px solid #3f51b5;
+  color: white;
+  font-size: 16px;
+}
+.button:hover{
+  background-color: #223ac2;
+  border-color: #223ac2;
+  border: 2px solid #223ac2;
+  color: white;
+}
+
+.fa-plus-circle{
+  color: #f7f7ff;
 }

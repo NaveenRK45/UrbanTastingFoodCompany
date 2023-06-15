@@ -7,17 +7,73 @@
     font-size: 1rem;
     margin-left: 2.5rem;
     font-weight: 500;
-    color: grey;
+    color: rgb(35, 33, 33);
 }
 .path{
     float: right;
     margin-right: 1.5rem;
     font-size: 14px;
 }
-.body{
-    background-color: #f7f7ff;
-}
+// .body{
+//     background-color: #f7f7ff;
+// }
 .ft{
     background-color: #ebebeb;
     padding: 0.5rem;
 }
+.card{
+    width: 95%;
+    margin: auto;
+    background: rgb(129,121,164);
+    background: linear-gradient(0deg, rgba(129,121,164,1) 11%, rgba(94,143,200,1) 45%);
+}
+  table{
+    margin: 10px;
+    width: 100%;
+  }
+  .sno{
+    width: 5%;
+  }
+  .name{
+    width: 10%;
+  }
+  .emailId{
+    width: 20%;
+  }
+  .mobileno{
+    width: 10%;
+  }
+  .empId{
+    width: 15%;
+  }
+  .emailVerify{
+    width: 10%;
+  }
+  .role{
+    width: 10%;
+  }
+  .CD{
+    width: 20%;
+  }
+
+  mat-paginator{
+    margin-left: 5px;
+    margin-right: -5px;
+    margin-bottom: 10px;
+  }
+  th{
+    color: #3f51b5;
+    font-size: 14px;
+    font-weight: 600;
+}
+.input-field {
+  padding: 6px 10px;
+  color: rgb(1, 1, 26);
+  border-radius: 0px;
+  background-color: #f3f8f6;
+}
+.add{
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 20px;
+  }
