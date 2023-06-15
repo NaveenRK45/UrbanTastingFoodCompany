@@ -26,8 +26,8 @@ export class UserService {
   getBranches(){
     return this.http.get('http://localhost:5000/user/branches')
   }
-  getSlots(){
-    return this.http.get('http://localhost:5000/user/slots')
+  getSlots(data:any){
+    return this.http.get('http://localhost:5000/user/slots?type='+data)
   }
   MakeOrder(data:any){
     return this.http.post('http://localhost:5000/user/booking',data)

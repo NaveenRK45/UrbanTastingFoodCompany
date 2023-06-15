@@ -40,6 +40,7 @@ import { UserOrderDetailsComponent } from './users/user-order-details/user-order
 import { UserBookingsComponent } from './users/user-bookings/user-bookings.component';
 import { UserConfirmComponent } from './users/user-confirm/user-confirm.component';
 import { UserCancelComponent } from './users/user-cancel/user-cancel.component';
+import { MainHomeComponent } from './Welcome-Page/main-home/main-home.component';
 
 
 @NgModule({
@@ -72,6 +73,7 @@ import { UserCancelComponent } from './users/user-cancel/user-cancel.component';
     UserBookingsComponent,
     UserConfirmComponent,
     UserCancelComponent,
+    MainHomeComponent,
 
 
   ],

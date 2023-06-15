@@ -3,10 +3,10 @@
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
-        <img src="assets/images/logo1.png" width="100%" height="15%" alt="IMG" loading="lazy"/>
+        <img src="assets/images/logo3.png" alt="IMG" loading="lazy" class="LG"/>
     <ng-container>
       <div class="admin">
-        <img src="assets/images/adminlogo.jpeg" class="rounded-circle user-img" alt="IMG" loading="lazy"/>
+        <img src="assets/images/adminlogo1.jpeg" class="rounded-circle user-img" alt="IMG" loading="lazy"/>
          &nbsp; Admin
          <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </div>
@@ -33,11 +33,11 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-
+      <span>Urban Tasting Food Company</span>
       <span class="space"></span>
       <span>
-        <img src="assets/images/adminlogo.jpeg" class="rounded-circle user-img" alt="IMG" loading="lazy"/>
-        &nbsp; Admin
+        <img src="assets/images/adminlogo1.jpeg" class="rounded-circle user-img" alt="IMG" loading="lazy"/>
+        &nbsp; 
       </span>
     </mat-toolbar>
     <ng-container>

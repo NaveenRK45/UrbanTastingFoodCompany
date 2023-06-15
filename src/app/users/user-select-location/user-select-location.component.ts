@@ -19,7 +19,6 @@ export class UserSelectLocationComponent implements OnInit{
   }
   selectLocation(b:any){
     this.user = JSON.parse(localStorage.getItem('UTFC-User')!)
-    console.warn(this.user._id,"user");
 
     let Data ={
       ...this.user.value,

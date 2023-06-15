@@ -1,0 +1,51 @@
+.container-fluid{
+    background-color: antiquewhite;
+}
+img {
+    border-radius: 20%;
+  }
+  .text{
+    font-size: 10px;
+}
+.cName{
+    font-size: 14px;
+    font-family: inherit;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.utfc{
+    font-size: 16px;
+    color: #8d8787;
+    font-family: serif;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+.Btn{
+    width: 40%;
+    margin: auto;
+    border-radius: 5px;
+    background-color: rgb(243, 209, 123);
+    color: #fff;
+    padding: 5px;
+    border-color: gold;
+}
+.Btn:hover{
+    background-color: rgb(215, 162, 30);
+    color: #fff;
+    transform: scale(1.0);
+}
+.Btn1{
+    width: 40%;
+    margin: auto;
+    border-radius: 5px;
+    background-color: rgb(97, 72, 238);
+    color: #fff;
+    padding: 5px;
+    border-color: rgb(97, 72, 238);
+}
+.Btn1:hover{
+    background-color: rgb(65, 112, 220);
+    color: #fff;
+    transform: scale(1.0);
+}

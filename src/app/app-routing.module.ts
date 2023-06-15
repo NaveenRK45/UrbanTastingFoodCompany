@@ -25,10 +25,12 @@ import { UserOrderDetailsComponent } from './users/user-order-details/user-order
 import { UserBookingsComponent } from './users/user-bookings/user-bookings.component';
 import { UserCancelComponent } from './users/user-cancel/user-cancel.component';
 import { UserConfirmComponent } from './users/user-confirm/user-confirm.component';
+import { MainHomeComponent } from './Welcome-Page/main-home/main-home.component';
 
 const routes: Routes = [
     { path: '', redirectTo: 'Welcome-Page', pathMatch: 'full' },
   { path: 'Welcome-Page', component: HomePageComponent },
+  {path:'NavigationTo',component:MainHomeComponent},
   { path: 'admin-login', component: AdminLoginComponent},
   {path:'user-login',component:UserLoginComponent},
   {path:'user-signup',component:UserSignupComponent},
