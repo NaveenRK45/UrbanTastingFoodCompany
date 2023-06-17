@@ -32,6 +32,9 @@ export class UserService {
   MakeOrder(data:any){
     return this.http.post('http://localhost:5000/user/booking',data)
   }
+  ViewOrders(id:any){
+    return this.http.get('http://localhost:5000/user/showbookings?user_id=' + id)
+  }
   UpdateOrder(id:any,data:any){
     return this.http.post('http://localhost:5000/user/booking/'+id,data)
   }

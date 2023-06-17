@@ -21,7 +21,7 @@ import { AdminDeleteBookingsComponent } from '../admin-delete-bookings/admin-del
 })
 export class AdminViewBookingsComponent {
 
-  displayedColumns:string[] =['Id','user','employeeId','branch','bookingDate','launchStatus','DinnerStatus','slot','action']
+  displayedColumns:string[] =['Id','user','employeeId','branch','bookingDate','lunchStatus','DinnerStatus','slot','action']
   dataSource!:MatTableDataSource<any>
   @ViewChild(MatPaginator) paginator!:MatPaginator
   @ViewChild(MatSort) sort!:MatSort
@@ -32,8 +32,6 @@ export class AdminViewBookingsComponent {
 
     this.AdminApi.ViewBookings().subscribe((res:any)=>{
       this.Bookings = res;
-      console.log(res,"check");
-      
       this.dataSource = new MatTableDataSource(this.Bookings)
       this.dataSource.paginator = this.paginator
       this.dataSource.sort = this.sort

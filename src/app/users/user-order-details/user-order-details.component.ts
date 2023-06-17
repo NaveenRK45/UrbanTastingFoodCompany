@@ -14,31 +14,57 @@ export class UserOrderDetailsComponent implements OnInit {
   users: any
   Branch: any
   myDate: any
+  startingDay:any
   week: any = []
   selectedIndex = 0;
-  buttonCondition:string = 'condition1'
+  buttonCondition:string = 'condition1';
+  isdisabled:boolean= false;
 
   constructor(private Api: UserService, private routes: Router, private dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.users = JSON.parse(localStorage.getItem('UTFC-User')!)
+    
     this.Api.getProfile(this.users._id).subscribe((res: any) => {
-      this.Branch = res; 
+      this.Branch = res;  
     });
-    this.Api.getSlots(this.users.lunch_status).subscribe((res:any)=>{
-      console.log(res,"check");
+    this.Api.ViewOrders(this.users._id).subscribe((res:any)=>{
+      console.log(res,"orders");
       
     })
 
-    const startingDay = new Date();
-    let thisDay = new Date(startingDay);
+     this.startingDay = new Date();
+    let thisDay = new Date(this.startingDay);
 
     for (let i = 0; i < 7; i++) {
       thisDay = new Date(Date.now() + i * 24 * 60 * 60 * 1000);
       this.week.push(thisDay)
     }
   }
+  changeCondition() {
+    if (this.buttonCondition === 'condition1') {
+      this.buttonCondition = 'condition2';
+      console.log('condition2');
+      
+    } else if (this.buttonCondition === 'condition2') {
+      this.buttonCondition = 'condition3';
+      console.log('condition3');
+      
+    } else {
+      this.buttonCondition = 'condition1';
+      console.log('condition1');
+      
+    }
+  }
   lunch(date: any) {
+    // if(this.startingDay){
+    //     this.isdisabled = true
+    //     console.log('disabled');
+        
+    // }else{
+    //   console.log('error');
+      
+    // }
     this.dialog.open(UserConfirmComponent, {
       width: "80%",
       height: "85%",
@@ -47,10 +73,9 @@ export class UserOrderDetailsComponent implements OnInit {
         type: "Lunch"
       }
     })
-    // [ngClass]="2+2 == 5 ? 'isBooked':'isCancel'"
   }
   dinner(date: any) {
-    this.dialog.open(UserCancelComponent, {
+    this.dialog.open(UserConfirmComponent, {
       width: "80%",
       height: "85%",
       data: {
