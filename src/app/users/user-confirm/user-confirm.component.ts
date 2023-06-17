@@ -1,5 +1,5 @@
 import { Component, Inject, OnInit, Type } from '@angular/core';
-import { MAT_DIALOG_DATA, MatDialog } from '@angular/material/dialog';
+import { MAT_DIALOG_DATA, MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { UserCancelComponent } from '../user-cancel/user-cancel.component';
 import { UserService } from 'src/app/shared/services/user.service';
 
@@ -10,32 +10,54 @@ import { UserService } from 'src/app/shared/services/user.service';
 })
 export class UserConfirmComponent implements OnInit{
   Slots: any;
-  checked:boolean = false
+  checked:boolean = false;
+  selectedSlots:any;
+  profile:any
 
   constructor(private dialog:MatDialog,
+    private dialogref:MatDialogRef<UserConfirmComponent>,
     @Inject(MAT_DIALOG_DATA) public data:any,
     private Api:UserService){}
 
 
   ngOnInit(): void {
-    // const profile = JSON.parse(localStorage.getItem('UTFC-User')!)
-    // console.log(profile,"check");
-    
+    this.profile = JSON.parse(localStorage.getItem('UTFC-User')!)   
     this.Api.getSlots(this.data.type).subscribe((res:any)=>{
       this.Slots = res;
     })
     
   }
   Book(){
-    // this.dialog.open(UserCancelComponent,{
-    //   width:"85%",
-    //   height:"80%"
-    // })  
-    this.Api.MakeOrder(this.data._id).subscribe((res:any)=>{
-      console.log(res,"check");  
-    })
+    if(this.data.type=="Lunch"){
+      let bookingdata = {
+        user_id: this.profile._id,
+      branch_id: this.profile.branch._id,
+         booking_date: this.data.date,
+         lunch_status: 4,
+         dinner_status: 0,
+        slot: this.selectedSlots,
+      }
+     this.Api.MakeOrder(bookingdata).subscribe((res:any)=>{   
+      console.log(res,"result");
+      
+      // this.dialogref.close()
+     })
+      
+    }else{
+    let bookingdata = {
+      user_id: this.profile._id,
+      branch_id: this.profile.branch._id,
+       booking_date: this.data.date,
+       lunch_status: 0,
+       dinner_status: 4,
+      slot: this.selectedSlots,
+    }
+    this.Api.MakeOrder(bookingdata).subscribe((res:any)=>{
+      this.dialogref.close()
+     })
   }
-  selectSlot(){
-    
+  }
+  selectSlot(d:any){
+    this.selectedSlots= d.slot_name 
   }
 }

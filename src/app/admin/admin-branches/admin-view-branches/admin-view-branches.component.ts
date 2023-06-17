@@ -20,13 +20,13 @@ export class AdminViewBranchesComponent {
   dataSource!:MatTableDataSource<any>
   @ViewChild(MatPaginator) paginator!:MatPaginator
   @ViewChild(MatSort) sort!:MatSort
-  Bookings:any;
+  Branches:any;
 
 
   constructor(private AdminApi:AdminService,public dialog:MatDialog){
     this.AdminApi.ViewBranch().subscribe((res:any)=>{
-      this.Bookings = res;
-      this.dataSource = new MatTableDataSource(this.Bookings)
+      this.Branches = res;
+      this.dataSource = new MatTableDataSource(this.Branches)
       this.dataSource.paginator = this.paginator
       this.dataSource.sort = this.sort
     })
