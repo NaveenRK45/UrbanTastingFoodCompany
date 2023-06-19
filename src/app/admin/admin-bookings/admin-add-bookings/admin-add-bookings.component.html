@@ -56,11 +56,11 @@
             <mat-form-field appearance="outline" >
                 <mat-label>Dinner Status</mat-label>
                 <mat-select formControlName="dinner_status">
-                    <mat-option value="0">not available</mat-option>
-                    <mat-option value="1">available</mat-option>
-                    <mat-option value="2">booked By User</mat-option>
-                    <mat-option value="3">Cancelled</mat-option>
-                    <mat-option value="4">Confirmed</mat-option>
+                    <mat-option value="not available">not available</mat-option>
+                    <mat-option value="available">available</mat-option>
+                    <mat-option value="booked By User">booked By User</mat-option>
+                    <mat-option value="Cancelled">Cancelled</mat-option>
+                    <mat-option value="Confirmed">Confirmed</mat-option>
                   </mat-select>
                 </mat-form-field>
         </div>
@@ -73,7 +73,7 @@
             <mat-form-field appearance="outline" >
             <mat-label>Slots</mat-label>
             <mat-select formControlName="slot">
-                <mat-option *ngFor="let s of Slots" value="{{s.from_time}} - {{s.to_time}}">{{s.from_time}} - {{s.to_time}}</mat-option>
+                <mat-option *ngFor="let s of Slots" value="{{s.slot_name}}">{{s.slot_name}}</mat-option>
               </mat-select>
             </mat-form-field>
         </div>

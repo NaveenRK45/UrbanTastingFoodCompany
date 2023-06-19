@@ -34,6 +34,9 @@ export class EditBookingsComponent implements OnInit{
     this.Api.ViewSlots().subscribe((res:any)=>{
       this.Slots = res;
     })
+
+    
+    
     this.UpdateBookingsForm.patchValue({
       user_id:this.data.user_id,
       branch_id:this.data.branch_id,

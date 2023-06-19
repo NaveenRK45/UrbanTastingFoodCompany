@@ -27,15 +27,18 @@
                 <div class="col-1"></div>
                 <div class="col-3 mt-4">
                     <button class="blue" 
-                            (click)="lunch(w);  isdisabled=true"
-                            [ngClass]="{'blue': buttonCondition === 'condition1', 'green':buttonCondition === 'condition2','red':buttonCondition === 'condition3'}"
-                            [disabled]="isdisabled"
+                            (click)="lunch(w);"
+                            [ngClass]="{'brown': buttonCondition === 'condition1', 'green':buttonCondition === 'condition2','red':buttonCondition === 'condition3'}"
+                            (click)="changeCondition()"
+                            [disabled]="w == week[0]"
                             >LUNCH
                     </button>
                 </div>
                 <div class="col-1"></div>
                 <div class="col-3 mt-4">
-                    <button class="blue" (click)="dinner(w)">DINNER</button>
+                    <button class="blue" (click)="dinner(w)" [disabled]="w == week[0]">
+                        DINNER
+                    </button>
                 </div>
                 <div class="col-1"></div>
             </div>

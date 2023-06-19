@@ -26,15 +26,19 @@ import { UserBookingsComponent } from './users/user-bookings/user-bookings.compo
 import { UserCancelComponent } from './users/user-cancel/user-cancel.component';
 import { UserConfirmComponent } from './users/user-confirm/user-confirm.component';
 import { MainHomeComponent } from './Welcome-Page/main-home/main-home.component';
+import { UserForgotPasswordComponent } from './users/user-forgot-password/user-forgot-password.component';
+import { AdminViewUserProfileComponent } from './admin/admin-bookings/admin-view-user-profile/admin-view-user-profile.component';
 
 const routes: Routes = [
     { path: '', redirectTo: 'Welcome-Page', pathMatch: 'full' },
   { path: 'Welcome-Page', component: HomePageComponent },
   {path:'NavigationTo',component:MainHomeComponent},
   { path: 'admin-login', component: AdminLoginComponent},
+
   {path:'user-login',component:UserLoginComponent},
   {path:'user-signup',component:UserSignupComponent},
   {path:'verify',component:UserEmailVerifyComponent},
+  {path:'forgot-password',component:UserForgotPasswordComponent},
   {path:'user-location',component:UserSelectLocationComponent},
   {path:'user-foodDetails',component:UserOrderDetailsComponent},
   {path:'user-bookings',component:UserBookingsComponent},
@@ -49,6 +53,7 @@ const routes: Routes = [
     {path:'Add-bookings',component:AdminAddBookingsComponent},
     {path:'Delete-bookings',component:AdminDeleteBookingsComponent},
     {path:'Update-bookings',component:AdminViewBookingsComponent},
+    {path:'Admmin-ViewUser',component:AdminViewUserProfileComponent},
     {path:'Confirmed',component:AdminConfirmedComponent},
     {path:'View-Users',component:AdminUsersComponent},
     {path:'Add-Branches',component:AdminAddBranchesComponent},
