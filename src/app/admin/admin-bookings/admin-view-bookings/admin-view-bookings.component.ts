@@ -10,6 +10,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { AdminAddBookingsComponent } from '../admin-add-bookings/admin-add-bookings.component';
 import { EditBookingsComponent } from '../edit-bookings/edit-bookings.component';
 import { AdminDeleteBookingsComponent } from '../admin-delete-bookings/admin-delete-bookings.component';
+import { AdminViewUserProfileComponent } from '../admin-view-user-profile/admin-view-user-profile.component';
 
 
 
@@ -30,8 +31,9 @@ export class AdminViewBookingsComponent {
 
   constructor(private AdminApi:AdminService,public dialog:MatDialog) {
 
-    this.AdminApi.ViewBookings().subscribe((res:any)=>{
+      this.AdminApi.ViewBookings().subscribe((res:any)=>{
       this.Bookings = res;
+      
       this.dataSource = new MatTableDataSource(this.Bookings)
       this.dataSource.paginator = this.paginator
       this.dataSource.sort = this.sort
@@ -50,6 +52,13 @@ export class AdminViewBookingsComponent {
     this.dialog.open(AdminAddBookingsComponent,{
       width:"40%",
       height:"89%"
+    })
+  }
+  View(v:any){
+    this.dialog.open(AdminViewUserProfileComponent,{
+      width:"40%",
+      height:"60%",
+      data:v
     })
   }
   Edit(e:any){

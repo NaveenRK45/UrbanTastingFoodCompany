@@ -41,6 +41,8 @@ import { UserBookingsComponent } from './users/user-bookings/user-bookings.compo
 import { UserConfirmComponent } from './users/user-confirm/user-confirm.component';
 import { UserCancelComponent } from './users/user-cancel/user-cancel.component';
 import { MainHomeComponent } from './Welcome-Page/main-home/main-home.component';
+import { UserForgotPasswordComponent } from './users/user-forgot-password/user-forgot-password.component';
+import { AdminViewUserProfileComponent } from './admin/admin-bookings/admin-view-user-profile/admin-view-user-profile.component';
 
 
 @NgModule({
@@ -74,6 +76,8 @@ import { MainHomeComponent } from './Welcome-Page/main-home/main-home.component'
     UserConfirmComponent,
     UserCancelComponent,
     MainHomeComponent,
+    UserForgotPasswordComponent,
+    AdminViewUserProfileComponent,
 
 
   ],

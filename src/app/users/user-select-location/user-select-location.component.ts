@@ -19,20 +19,13 @@ export class UserSelectLocationComponent implements OnInit{
   }
   selectLocation(b:any){
     this.user = JSON.parse(localStorage.getItem('UTFC-User')!)
-
     let Data ={
       ...this.user.value,
       branch:b
     }
-    // this.Api.MakeOrder(Data).subscribe((res:any)=>{
-    //   console.log(res,"order");
-      
-    // })
+
     this.Api.updateProfile(this.user._id,Data).subscribe((res:any)=>{
-      console.log(res,"updateProfile");
-      
-    })
-    
+    })  
   }
 
 }
